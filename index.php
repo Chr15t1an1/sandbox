@@ -16,7 +16,7 @@ try {
       $field_em = $_POST['email_home'];
       $field_e = $_POST['event'];
       $fields = array($field_em,$field_e);
-      $fp = fopen('file.csv', 'w');
+      $fp = fopen('file.csv', 'a');
       fputcsv($fp, $fields);
       echo "sucess";
 
