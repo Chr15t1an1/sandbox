@@ -6,17 +6,17 @@
     header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description');
 
 
-
- return true;
-
-
-    if( isset($_POST[]) )
-    {
-         //$fromPerson = '+from%3A'.$_POST['fromPerson'];
-         // echo $fromPerson;
-         return true;
-
-    }
+ //
+ // return true;
+ //
+ //
+ //    if( isset($_POST[]) )
+ //    {
+ //         //$fromPerson = '+from%3A'.$_POST['fromPerson'];
+ //         // echo $fromPerson;
+ //         return true;
+ // //
+ //    }
 
 
 // Show all information, defaults to INFO_ALL
