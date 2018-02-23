@@ -1,0 +1,26 @@
+notes.txt
+curl -X POST -d "fizz=buzz" https://requestb.in/1b2dodq1
+
+
+
+
+$.ajax({
+    type: 'POST',
+    url: 'https://requestb.in/1b2dodq1',
+    crossDomain: true,
+    data: '{"some":"json"}',
+    dataType: 'json',
+    success: function(responseData, textStatus, jqXHR) {
+        var value = responseData.someKey;
+    },
+    error: function (responseData, textStatus, errorThrown) {
+        alert('POST failed.');
+    }
+});
+
+
+
+$.get( "http://sandbox.christiancampbell.us/", function( data ) {
+  $( ".wrapper" ).html( data );
+  alert( "Load was performed." );
+});
