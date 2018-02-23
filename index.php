@@ -13,7 +13,7 @@ ini_set('display_errors', '1');
 
 try {
 
-      $field_em = $_POST['email'];
+      $field_em = $_POST['email_home'];
       $field_e = $_POST['event'];
       $fields = array($field_em,$field_e);
       $fp = fopen('file.csv', 'w');
