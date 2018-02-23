@@ -4,19 +4,7 @@ curl -X POST -d "fizz=buzz" https://requestb.in/1b2dodq1
 
 curl -X GET -H "Origin: http://example.com" --verbose https://sandbox.christiancampbell.us/
 
-$.ajax({
-    type: 'POST',
-    url: 'https://requestb.in/1b2dodq1',
-    crossDomain: true,
-    data: '{"some":"json"}',
-    dataType: 'json',
-    success: function(responseData, textStatus, jqXHR) {
-        var value = responseData.someKey;
-    },
-    error: function (responseData, textStatus, errorThrown) {
-        alert('POST failed.');
-    }
-});
+
 
 if( isset($_POST['fromPerson']) )
 {
@@ -53,16 +41,169 @@ var createCORSRequest = function(method, url) {
   return xhr;
 };
 
-var url = 'http://sandbox.christiancampbell.us/';
-var method = 'GET';
+var url = 'https://sandbox.christiancampbell.us/';
+var method = 'POST';
 var xhr = createCORSRequest(method, url);
 
 xhr.onload = function() {
-  alert( "Load was performed." );
+  // Success code goes here.
 };
 
 xhr.onerror = function() {
-alert( "Load ERROR." );
+  // Error code goes here.
 };
 
 xhr.send();
+
+;
+
+
+
+
+
+
+
+// Set the margin of p with JS next to picture.
+$(document).ready(function(){
+//First header row .
+// var sib = $("#row-1 .container").width();
+
+var sib = $("#row-1_first_p").width();
+
+
+// var sib = $("#row-1_first_p").width();
+// var bod = $("html").width();
+var bod = $("body").width();
+
+
+
+//var pad = 25;
+var lp_x = bod - sib;
+var lp_fin = (lp_x/2)-15;
+// 15 px rpw padding
+
+
+
+
+
+// $('#row-1-con-2_p p').css('margin-left',lp_fin+'px');
+$('#row-1-con-2_p').css('margin-left',lp_fin+'px');
+$('#row-1-con-2_p').css('margin-right',lp_fin+'px');
+
+
+
+});
+
+
+
+var chrome   = navigator.userAgent.indexOf('Chrome') > -1;
+
+
+
+
+
+// Set the margin top to picture.
+$(document).ready(function(){
+
+var htHeight = $('html').width();
+
+ if (htHeight > 767 && chrome) {
+
+console.log('cromesauce');
+
+      var dHeight = $('#row-1-con-2').height();
+
+      var imgHeight = $('#row-1-con-2 img').height();
+
+      var calcMar = dHeight - imgHeight+ 100;
+
+      $('.row-1-img').css('margin-top',calcMar+'px');
+
+
+}
+});
+
+
+
+
+
+//Fade in
+$( "#contactForm_1" ).click(function() {
+  $("#formHide").fadeIn( "4000" );
+});
+
+
+// $("#contactForm_1").validate();
+
+
+// form validatio
+
+// Wait for the DOM to be ready
+$(function() {
+  // Initialize form validation on the registration form.
+  // It has the name attribute "registration"
+  $("#contactForm_1").validate({
+    // Specify validation rules
+    rules: {
+      // The key name on the left side is the name attribute
+      // of an input field. Validation rules are defined
+      // on the right side
+      name: "required",
+      email: {
+        required: true,
+        // Specify that email should be validated
+        // by the built-in "email" rule
+        email: true
+      },
+
+    },
+    // Specify validation error messages
+    messages: {
+      name: "Please enter your Name",
+      email: "Please enter a valid email address"
+    },
+    // Make sure the form is submitted to the destination defined
+    // in the "action" attribute of the form when valid
+    submitHandler: function(form) {
+	// formInstance = $(form.target);
+
+		d = $("#contactForm_1").serialize();
+
+		$.post("t.php",d, function(data, status){
+        console.log("Data: " + data + "\nStatus: " + status);
+    	$("#contactForm_1").fadeOut( "4000" );
+		$('#success_thumb').fadeIn("3000").css("display","block");
+		});
+
+      return false;
+
+    }
+  });
+});
+
+
+
+
+
+
+$.post("https://sandbox.christiancampbell.us/",d, function(data, status){
+    console.log("Data: " + data + "\nStatus: " + status);
+//  $("#contactForm_1").fadeOut( "4000" );
+///$('#success_thumb').fadeIn("3000").css("display","block");
+});
+
+
+
+$.ajax({
+    type: 'POST',
+    url: 'https://sandbox.christiancampbell.us/',
+    crossDomain: true,
+    data: '{"some":"json"}',
+    dataType: 'json',
+    success: function(responseData, textStatus, jqXHR) {
+        var value = responseData.someKey;
+    },
+    error: function (responseData, textStatus, errorThrown) {
+        alert('POST failed.');
+    }
+});

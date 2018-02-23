@@ -8,11 +8,13 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // The request is using the POST method
-        return "hi";
+        echo "hi";
    }else {
-     return "Noooooooo!";
+     echo "Noooooooo!";
    }
 
+
+echo "Noooooooo!";
 
 // Show all information, defaults to INFO_ALL
 // phpinfo();
