@@ -6,18 +6,13 @@
     // header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description');
 
 
- //
- // return true;
- //
- //
- //    if( isset($_POST[]) )
- //    {
- //         //$fromPerson = '+from%3A'.$_POST['fromPerson'];
- //         // echo $fromPerson;
- //         return true;
- // //
- //    }
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // The request is using the POST method
+        return "hi";
+   }else {
+     return "Noooooooo!";
+   }
 
 
 // Show all information, defaults to INFO_ALL
-phpinfo();
+// phpinfo();

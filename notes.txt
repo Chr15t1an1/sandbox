@@ -2,7 +2,7 @@ notes.txt
 curl -X POST -d "fizz=buzz" https://requestb.in/1b2dodq1
 
 
-
+curl -X GET -H "Origin: http://example.com" --verbose https://sandbox.christiancampbell.us/
 
 $.ajax({
     type: 'POST',
@@ -25,7 +25,6 @@ if( isset($_POST['fromPerson']) )
 }
 
 $.get( "https://sandbox.christiancampbell.us/", function( data ) {
-  $( ".wrapper" ).html( data );
   alert( "Load was performed." );
 });
 
