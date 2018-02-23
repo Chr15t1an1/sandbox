@@ -185,11 +185,14 @@ $(function() {
 
 
 
+d = $(a).serialize();
 
-$.post("https://sandbox.christiancampbell.us/",d, function(data, status){
+
+var a = 'aaasljfnadlkfjhad;fkadhb';
+
+
+$.post("https://sandbox.christiancampbell.us/",a, function(data, status){
     console.log("Data: " + data + "\nStatus: " + status);
-//  $("#contactForm_1").fadeOut( "4000" );
-///$('#success_thumb').fadeIn("3000").css("display","block");
 });
 
 

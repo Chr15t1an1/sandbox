@@ -1,20 +1,26 @@
 <?php
-    // header('Access-Control-Allow-Origin: https://www.knowledgecoop.com/');
-    // header("Access-Control-Allow-Credentials: true");
-    // header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
-    // header('Access-Control-Max-Age: 1000');
-    // header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description');
-
 
     if ($_POST) {
+
+
+      $field_em = $_POST['email'];
+      $field_e = $_POST['event'];
+
+      echo $field_em.' '.$field_e;
+
+
         // The request is using the POST method
-        echo "hi";
+      //
+      // $fp = fopen('file.csv', 'w');
+      //
+      // fputcsv($fp, $fields);
+      //
+      //
+      //
+      // echo "sucess";
+
+
+
    }else {
-     echo "Noooooooo!";
+     echo "Not a resource";
    }
-
-
-//echo "Noooooooo!";
-
-// Show all information, defaults to INFO_ALL
-// phpinfo();
