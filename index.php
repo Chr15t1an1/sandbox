@@ -8,7 +8,7 @@
 
 $a = $field_em.' '.$field_e;
 
-      echo $a  ;
+      echo $a;
 
 
         // The request is using the POST method
@@ -26,3 +26,5 @@ $a = $field_em.' '.$field_e;
    }else {
      echo "Not a resource";
    }
+
+echo "last";
