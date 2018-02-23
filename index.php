@@ -8,5 +8,14 @@
 
 
 
+    if( isset($_POST[]) )
+    {
+         //$fromPerson = '+from%3A'.$_POST['fromPerson'];
+         // echo $fromPerson;
+         return true;
+
+    }
+
+
 // Show all information, defaults to INFO_ALL
-phpinfo();
+//phpinfo();

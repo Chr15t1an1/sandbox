@@ -20,7 +20,43 @@ $.ajax({
 
 
 
-$.get( "http://sandbox.christiancampbell.us/", function( data ) {
+$.get( "https://sandbox.christiancampbell.us/", function( data ) {
   $( ".wrapper" ).html( data );
   alert( "Load was performed." );
 });
+
+
+
+----
+
+
+
+var createCORSRequest = function(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // Most browsers.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // IE8 & IE9
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+};
+
+var url = 'http://sandbox.christiancampbell.us/';
+var method = 'GET';
+var xhr = createCORSRequest(method, url);
+
+xhr.onload = function() {
+  // Success code goes here.
+};
+
+xhr.onerror = function() {
+  // Error code goes here.
+};
+
+xhr.send();
