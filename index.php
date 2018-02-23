@@ -6,7 +6,9 @@
       $field_em = $_POST['email'];
       $field_e = $_POST['event'];
 
-      echo $field_em.' '.$field_e;
+$a = $field_em.' '.$field_e;
+
+      echo $a  ;
 
 
         // The request is using the POST method
