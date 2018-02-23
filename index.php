@@ -7,6 +7,8 @@
 
 
 
+ return true;
+
 
     if( isset($_POST[]) )
     {

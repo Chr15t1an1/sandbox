@@ -18,7 +18,11 @@ $.ajax({
     }
 });
 
-
+if( isset($_POST['fromPerson']) )
+{
+     $fromPerson = '+from%3A'.$_POST['fromPerson'];
+     echo $fromPerson;
+}
 
 $.get( "https://sandbox.christiancampbell.us/", function( data ) {
   $( ".wrapper" ).html( data );
@@ -26,7 +30,10 @@ $.get( "https://sandbox.christiancampbell.us/", function( data ) {
 });
 
 
-
+$.post( "https://sandbox.christiancampbell.us/", { name: "John", time: "2pm" })
+  .done(function( data ) {
+    alert( "Data Loaded: " + data );
+  });
 ----
 
 
@@ -52,11 +59,11 @@ var method = 'GET';
 var xhr = createCORSRequest(method, url);
 
 xhr.onload = function() {
-  // Success code goes here.
+  alert( "Load was performed." );
 };
 
 xhr.onerror = function() {
-  // Error code goes here.
+alert( "Load ERROR." );
 };
 
 xhr.send();
