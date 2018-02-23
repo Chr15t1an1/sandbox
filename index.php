@@ -6,7 +6,7 @@
     // header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description');
 
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_POST) {
         // The request is using the POST method
         echo "hi";
    }else {
