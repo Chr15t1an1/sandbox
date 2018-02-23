@@ -3,8 +3,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 
-var_dump($_REQUEST);
+$x = http_build_query($_REQUEST);
 
+echo $x;
 //
 //
 //
