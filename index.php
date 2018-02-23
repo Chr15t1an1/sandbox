@@ -1,7 +1,7 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-
+// error_reporting(E_ALL);
+// ini_set('display_errors', '1');
+//
 
 $x = http_build_query($_REQUEST);
 
@@ -20,7 +20,7 @@ try {
       echo "sucess";
 
     } catch (Exception $e) {
-        echo 'Caught exception: ',  $e->getMessage(), "\n";
+
 
           $fp = fopen('error_requests.txt', 'a');
           $data = "\n".$e->getMessage();
@@ -30,6 +30,9 @@ try {
           fwrite($handle, $data);
 
           fclose($handle);
+
+
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
 
     }
 
